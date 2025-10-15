@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Logical Operators & Login Example</title>
+</head>
+<body>
+  <h1>Logical Operators :-</h1>
+
+  <script>
+    // AND operator
+    let age = 20;
+    let hasLicense = true;
+
+    if (age >= 20 && hasLicense) {
+      console.log("You can drive a car");
+    } else {
+      console.log("You cannot drive a car");
+    }
+
+    // OR operator
+    let isBirthday = false;
+    let gotGoodResult = true;
+
+    if (isBirthday || gotGoodResult) {
+      console.log("You will get a gift");
+    } else {
+      console.log("You will not get a gift");
+    }
+
+    // NOT operator
+    let isWeekend = false;
+    if (!isWeekend) {
+      console.log("It’s a school day");
+    } else {
+      console.log("It’s weekend");
+    }
+
+    // Function example
+    function sayHello() {
+      console.log("Abdul Rehman");
+    }
+
+    sayHello();
+
+    // Function with user input
+    function calculateBMI() {
+      let weight = prompt("Enter your weight in kg:");
+      let height = prompt("Enter your height in meters:");
+
+      weight = Number(weight);
+      height = Number(height);
+
+      let bmi = weight / (height ** 2);
+      console.log("Your BMI is:", bmi);
+    }
+
+    // Example with parameters
+    function calculateBMIWithParams(weight, height) {
+      let bmi = weight / (height ** 2);
+      console.log("BMI (with parameters):", bmi);
+    }
+
+    function calculatePercentage(totalMarks, obtainedMarks) {
+      let percentage = (obtainedMarks / totalMarks) * 100;
+      console.log("Your percentage is:", percentage + "%");
+    }
+
+    // Function calls
+    calculateBMIWithParams(70, 1.75);
+    calculatePercentage(500, 430);
+
+    // Function parameter
+    function calculateBMIValue(weight, height) {
+      let bmi = weight / (height ** 2);
+      return bmi;
+    }
+
+    // Function Arguments
+    let bmiValue = calculateBMIValue(75, 1.82);
+    alert("Your BMI is: " + bmiValue);
+
+    // Corrected calculateAge function
+    function calculateAge(birthYear) {
+      const currentYear = new Date().getFullYear();
+      const age = currentYear - birthYear;
+
+      if (age >= 19) {
+        console.log("Eligible");
+      } else {
+        console.log("Not eligible");
+      }
+    }
+
+    calculateAge(2005);
+
+    
+    
+    function login() {
+      const correctEmail = "test@example.com";
+      const correctPassword = "12345";
+
+      const email = prompt("Enter your email:");
+      const password = prompt("Enter your password:");
+
+      if (email === correctEmail && password === correctPassword) {
+        alert(" Login successful! Welcome " + email);
+        console.log("Login successful");
+      } else {
+        alert(" Invalid email or password!");
+        console.log("Login failed");
+      }
+    }
+
+    // Call login function (optional)
+    login();
+
+  </script>
+</body>
+</html>
